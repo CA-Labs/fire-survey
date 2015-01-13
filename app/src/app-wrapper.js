@@ -5,7 +5,7 @@
  * @created: 13/01/15
  */
 
-angular.module('fire-survey', [
+angular.module('fireSurvey', [
     'ui.router'
 ])
     .config(ApplicationConfig) // including routes

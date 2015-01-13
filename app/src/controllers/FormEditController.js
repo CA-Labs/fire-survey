@@ -6,8 +6,6 @@
 class FormEditController extends FormController {
 
     construct(
-        $stateParams
     ) {
-        this._stateParams = $stateParams;
     }
 }

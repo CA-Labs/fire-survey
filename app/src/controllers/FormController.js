@@ -12,8 +12,5 @@ class FormController {
          */
         this.data = {};
 
-
-    }
-
-    
+  }
 }

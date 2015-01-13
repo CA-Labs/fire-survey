@@ -2,7 +2,7 @@
  * Created by jacek on 1/13/2015.
  */
 
-export function ApplicationConfig(
+function ApplicationConfig(
     $stateProvider
     , $urlRouterProvider
 ) {
@@ -20,6 +20,5 @@ export function ApplicationConfig(
         });
 
     // fallback routes
-    $urlRouterProvider.when('/', '/form');
     $urlRouterProvider.otherwise('/form');
 }
