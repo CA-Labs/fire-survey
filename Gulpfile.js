@@ -23,7 +23,7 @@ var dist = [
 ];
 
 // default task
-gulp.task('default', ['traceur', 'concat', 'uglify']);
+gulp.task('default', ['traceur', 'concat']);
 
 // watch task
 gulp.task('watch', function () {
