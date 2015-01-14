@@ -4,6 +4,6 @@
  * @copyright: Jacek Dominiak
  * @created: 13/01/15
  */
-angular.module('firesurvey')
-    .controller('FormController', FormController)
-    .controller('FormEditController', FormEditController);
+angular.module('fire-survey')
+    .controller('FormController', FormController);
+    //.controller('FormEditController', FormEditController);

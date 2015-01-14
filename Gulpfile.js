@@ -18,9 +18,9 @@ var src = [
 ];
 
 var dist = [
-    'app/dist/app-init.js'
-    , 'app/dist/ApplicationConfig.js'
-    , 'app/dist/**/*.js'
+    , 'app/dist/app-init.js'
+    , 'app/dist/controllers/FormController.js'
+    , 'app/dist/controllers/FormEditController.js'
     , 'app/dist/app-wrapper.js'
 ];
 

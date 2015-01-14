@@ -8,6 +8,8 @@ class FormController {
         $stateParams
         , $http
     ) {
+
+        this.$inject = ['$stateParams', '$http']
         /**
          * Data holder for the form data
          * @type {{}}
@@ -20,21 +22,27 @@ class FormController {
         this._stateParams = $stateParams;
 
         /**
-         * HTTP
+         * Fetch forms data to be rendered
          */
-        this._http = $http;
+        //$http.get(window.location.host + '/forms/' + this._stateParams.formTemplate)
+        //    .success(function (res) {
+        //        this.formTemplate = res.data;
+        //    });
+        this.formFields = [
+            {
+                "key": "firstName",
+                "type": "text",
+                "label": "First Name",
+                "placeholder": "Jane"
+            },
+            {
+                "key": "lastName",
+                "type": "text",
+                "label": "Last Name",
+                "placeholder": "Doe"
+            }
+        ];
 
-        /**
-         * Initialize form template
-         */
-        this.formTemplate = "";
-    }
-
-    init() {
-        this._http.get(window.location.host + '/forms/' + this._stateParams.formTemplate)
-            .success(function (res) {
-                this.formTemplate = res.data;
-            });
     }
 
     submit() {
