@@ -9,6 +9,9 @@ class FormController {
         , $http
     ) {
 
+        // Closure
+        var self = this;
+
         this.$inject = ['$stateParams', '$http']
         /**
          * Data holder for the form data
@@ -24,25 +27,19 @@ class FormController {
         /**
          * Fetch forms data to be rendered
          */
-        //$http.get(window.location.host + '/forms/' + this._stateParams.formTemplate)
-        //    .success(function (res) {
-        //        this.formTemplate = res.data;
-        //    });
-        this.formFields = [
-            {
-                "key": "firstName",
-                "type": "text",
-                "label": "First Name",
-                "placeholder": "Jane"
-            },
-            {
-                "key": "lastName",
-                "type": "text",
-                "label": "Last Name",
-                "placeholder": "Doe"
-            }
-        ];
 
+        // initalize formFields
+        this.formFields = '';
+        // fetch it from the base
+        $http.get(window.location.protocol +
+        '//' + window.location.host +
+        '/fire-survey/forms/' +
+        this._stateParams.formTemplate + '.json')
+            .then(function (res) {
+                self.formFields = res.data;
+            }, function () {
+                self.error = "No template found";
+            });
     }
 
     submit() {

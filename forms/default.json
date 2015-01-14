@@ -3,7 +3,8 @@
     "key": "firstName",
     "type": "text",
     "label": "First Name",
-    "placeholder": "Jane"
+    "placeholder": "Jane",
+    "required": true
   },
   {
     "key": "lastName",
