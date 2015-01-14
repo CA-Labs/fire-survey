@@ -4,10 +4,6 @@
  * @copyright: Jacek Dominiak
  * @created: 13/01/15
  */
-
-angular.module('fireSurvey', [
-    'ui.router'
-])
-    .config(ApplicationConfig) // including routes
+angular.module('firesurvey')
     .controller('FormController', FormController)
     .controller('FormEditController', FormEditController);

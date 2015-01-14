@@ -2,10 +2,7 @@
  * Created by jacek on 1/13/2015.
  */
 
-function ApplicationConfig(
-    $stateProvider
-    , $urlRouterProvider
-) {
+function ApplicationConfig($stateProvider, $urlRouterProvider) {
 
     $stateProvider
         .state('form', {

@@ -5,7 +5,7 @@
 
 class FormEditController extends FormController {
 
-    construct(
-    ) {
+    constructor() {
+        super();
     }
 }

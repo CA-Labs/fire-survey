@@ -13,13 +13,15 @@ var gulp = require('gulp'),
 
 // scopes definitions
 var src = [
-    'app/src/*.js',
-    'app/src/**/*.js'
+    'app/src/*.js'
+    , 'app/src/**/*.js'
 ];
 
 var dist = [
-    'app/dist/*.js',
-    'app/dist/**/*.js'
+    'app/dist/app-init.js'
+    , 'app/dist/ApplicationConfig.js'
+    , 'app/dist/**/*.js'
+    , 'app/dist/app-wrapper.js'
 ];
 
 // default task
