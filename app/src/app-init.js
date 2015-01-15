@@ -8,8 +8,13 @@ angular.module('fire-survey', [
     'ng'
     , 'ui.router'
     , 'formly'
+    , 'firebase'
 ])
-    .config(ApplicationConfig);
+    .config(ApplicationConfig)
+    .constant('Configuration', {
+        "title": "Fire Survey"
+    });
+
 
 /**
  * Application Configuration with Routes

@@ -12,7 +12,6 @@ class FormController {
         // Closure
         var self = this;
 
-        this.$inject = ['$stateParams', '$http']
         /**
          * Data holder for the form data
          * @type {{}}
@@ -40,6 +39,10 @@ class FormController {
             }, function () {
                 self.error = "No template found";
             });
+    }
+
+    clean() {
+        this.data = {};
     }
 
     submit() {

@@ -18,7 +18,8 @@ var src = [
 ];
 
 var dist = [
-    , 'app/dist/app-init.js'
+    'app/dist/app-init.js'
+    , 'app/dist/controllers/MainController.js'
     , 'app/dist/controllers/FormController.js'
     , 'app/dist/controllers/FormEditController.js'
     , 'app/dist/app-wrapper.js'

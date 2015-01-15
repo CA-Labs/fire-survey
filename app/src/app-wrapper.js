@@ -5,5 +5,6 @@
  * @created: 13/01/15
  */
 angular.module('fire-survey')
-    .controller('FormController', FormController);
-    //.controller('FormEditController', FormEditController);
+    .controller('MainController', MainController)
+    .controller('FormController', FormController)
+    .controller('FormEditController', FormEditController);

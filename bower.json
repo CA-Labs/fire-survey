@@ -20,6 +20,7 @@
     "ui-router": "~0.2.13",
     "angular-formly": "~1.0.0",
     "traceur": "~0.0.81",
-    "angular-formly-templates-bootstrap": "~0.0.2"
+    "angular-formly-templates-bootstrap": "~0.0.2",
+    "bootstrap": "~3.3.1"
   }
 }

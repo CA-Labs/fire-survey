@@ -1,3 +1,5 @@
+<div class="alert alert-danger alert-dismissable" ng-show="Form.error">{{ Form.error }}</div>
 <formly-form model="Form.data" fields="Form.formFields" >
     <button ng-click="Form.submit()" type="submit" class="btn btn-primary pull-right">Submit</button>
+    <a class="btn btn-default" ng-click="Form.clean()">Cancel</a>
 </formly-form>
