@@ -1,12 +1,11 @@
 /**
  * Created by jacek on 1/13/2015.
  */
-
-
 class FormEditController extends FormController {
 
     constructor(
-        $stateParams
+        $state
+        , $stateParams
         , $http
         , $firebase
         , FirebaseConfig
@@ -14,25 +13,27 @@ class FormEditController extends FormController {
 
 
         super(
-            $stateParams
+            $state
+            , $stateParams
             , $http
             , $firebase
             , FirebaseConfig
         );
 
+        // fetch Form data
+        const url = FirebaseConfig.url + FirebaseConfig.forms + '/' + $stateParams.resultId;
+        this.formData = $firebase(new Firebase(url)).$asObject();
+    }
+
+    /**
+     * Overwrite initial submit function as per this controller. On the edit controller
+     * the purpose of the submit is to save the data rather then add new element.
+     */
+    submit() {
         // Closure
         var self = this;
 
-        // fetch Form data
-        const url = FirebaseConfig.url + FirebaseConfig.forms + '/' + $stateParams.resultId;
-        var test = $firebase(new Firebase(url)).$asObject();
-
-        this.formData = test;
-
-        console.log(test);
-    }
-
-    submit() {
+        // Save edited element
         this.formData.$save().then(function () {
             self.message = "Data Saved!";
         }, function (error) {
