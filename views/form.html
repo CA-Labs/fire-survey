@@ -1,6 +1,9 @@
 <div class="alert alert-danger alert-dismissable" ng-show="Form.error">{{ Form.error }}</div>
-<div class="alert alert-danger">
-    {{ Form.formData }}
+<div class="panel">
+    <div class="panel-heading">Data</div>
+    <div class="panel-body">
+        {{ Form.formData }}
+    </div>
 
 </div>
 <formly-form model="Form.formData" fields="Form.formFields">

@@ -48,7 +48,7 @@ class FormController {
     }
 
     clean() {
-        this.data = {};
+        this.formData = {};
     }
 
     submit() {
