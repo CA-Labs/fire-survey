@@ -40,8 +40,8 @@ function ApplicationConfig($stateProvider, $urlRouterProvider, formlyConfigProvi
             , templateUrl: 'views/form.html'
             , controller: 'FormController as Form'
         })
-        .state('form.edit', {
-            url: '/form/:formId/user/:userEmailId'
+        .state('edit', {
+            url: '/edit/:formTemplate/result/:resultId'
             , templateUrl: 'views/form.html'
             , controller: 'FormEditController as Form'
         });
