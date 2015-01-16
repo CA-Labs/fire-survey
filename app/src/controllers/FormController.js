@@ -5,7 +5,8 @@
 class FormController {
 
     constructor(
-        $stateParams
+        $state
+        , $stateParams
         , $http
         , $firebase
         , FirebaseConfig
@@ -21,8 +22,9 @@ class FormController {
         this.formData = {};
 
         /**
-         * Assign state Parameters
+         * Assign state and state Parameters
          */
+        this._state = $state;
         this._stateParams = $stateParams;
 
         /**
@@ -31,31 +33,39 @@ class FormController {
 
         // initalize formFields
         this.formFields = '';
+
+        // for debug purposes, check where are you hosted
+        const urlExtension = (window.location.hostname == 'localhost') ?
+            '/fire-survey/forms/' :
+            '/forms/';
+
         // fetch it from the base
         $http.get(window.location.protocol +
         '//' + window.location.host +
-        '/fire-survey/forms/' +
-        this._stateParams.formTemplate + '.json')
-            .then(function (res) {
-                self.formFields = res.data;
-            }, function () {
-                self.error = "No template found";
-            });
-
+            urlExtension +
+            this._stateParams.formTemplate + '.json')
+                .then(function (res) {
+                    self.formFields = res.data;
+                }, function () {
+                    self.error = "No template found";
+                });
 
         // Initialize Firebase
         this.results = $firebase(new Firebase(FirebaseConfig.url + FirebaseConfig.forms)).$asArray();
     }
 
     clean() {
-        this.data = {};
+        this.formData = {};
     }
 
     submit() {
+        // Closure
+        var self = this;
+        // Add new element
         this.results.$add(this.formData).then(
             function (value) {
                 //TODO: change the state to the saved one
-                console.log(value.key());
+                self._state.transitionTo('edit', {"formTemplate": self._stateParams.formTemplate, "resultId": value.key()});
             }
         );
     }
