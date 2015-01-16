@@ -1,0 +1,26 @@
+{
+  "name": "fire-survey",
+  "version": "0.0.1",
+  "description": "Fire Survey is a survey system designed to capture custom made surveys with ability to edit responses after form submission.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CA-Labs/fire-survey.git"
+  },
+  "author": "Jacek Dominiak <domja01@ca.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CA-Labs/fire-survey/issues"
+  },
+  "homepage": "https://github.com/CA-Labs/fire-survey",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-concat": "^2.4.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-traceur": "^0.15.0",
+    "gulp-uglify": "^1.0.2"
+  }
+}

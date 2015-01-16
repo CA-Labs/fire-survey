@@ -30,3 +30,13 @@ node_modules
 
 # Idea folder
 .idea
+
+# Build dependencies
+app/dist
+app.js
+
+# Componets Bower
+components
+
+# Firebase init
+firebase.json

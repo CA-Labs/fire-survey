@@ -1,0 +1,15 @@
+[
+  {
+    "key": "firstName",
+    "type": "text",
+    "label": "First Name",
+    "placeholder": "Jane",
+    "required": true
+  },
+  {
+    "key": "lastName",
+    "type": "text",
+    "label": "Last Name",
+    "placeholder": "Doe"
+  }
+]
