@@ -37,3 +37,6 @@ app.js
 
 # Componets Bower
 components
+
+# Firebase init
+firebase.json
