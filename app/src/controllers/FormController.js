@@ -7,6 +7,8 @@ class FormController {
     constructor(
         $stateParams
         , $http
+        , $firebase
+        , FirebaseConfig
     ) {
 
         // Closure
@@ -16,7 +18,7 @@ class FormController {
          * Data holder for the form data
          * @type {{}}
          */
-        this.data = {};
+        this.formData = {};
 
         /**
          * Assign state Parameters
@@ -39,6 +41,10 @@ class FormController {
             }, function () {
                 self.error = "No template found";
             });
+
+
+        // Initialize Firebase
+        this.results = $firebase(new Firebase(FirebaseConfig.url + FirebaseConfig.forms)).$asArray();
     }
 
     clean() {
@@ -46,6 +52,11 @@ class FormController {
     }
 
     submit() {
-        console.log('submitted');
+        this.results.$add(this.formData).then(
+            function (value) {
+                //TODO: change the state to the saved one
+                console.log(value.key());
+            }
+        );
     }
 }

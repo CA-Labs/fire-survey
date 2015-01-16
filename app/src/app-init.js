@@ -13,6 +13,11 @@ angular.module('fire-survey', [
     .config(ApplicationConfig)
     .constant('Configuration', {
         "title": "Fire Survey"
+        , "text": ""
+    })
+    .constant('FirebaseConfig', {
+        url: 'https://ca-fire-survey.firebaseio.com/'
+        , forms: 'results'
     });
 
 
@@ -22,7 +27,7 @@ angular.module('fire-survey', [
  * @param $urlRouterProvider
  * @constructor
  */
-function ApplicationConfig($stateProvider, $urlRouterProvider) {
+function ApplicationConfig($stateProvider, $urlRouterProvider, formlyConfigProvider) {
 
     $stateProvider
         .state('form', {
@@ -43,4 +48,7 @@ function ApplicationConfig($stateProvider, $urlRouterProvider) {
 
     // fallback routes
     $urlRouterProvider.otherwise('/form/default');
+
+    // extend angular-formly with custom template
+    formlyConfigProvider.setTemplateUrl('multi-checkbox', 'views/multi-checkbox-template.html');
 }

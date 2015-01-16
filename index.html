@@ -5,6 +5,7 @@
     <title>Fire Survey Demo</title>
     <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css"/>
     <script src="components/jquery/dist/jquery.min.js"></script>
     <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="components/angular/angular.min.js"></script>
@@ -20,13 +21,19 @@
 <div class="container" ng-controller="MainController as Main">
     <div class="header">
         <h3 class="text-muted">{{ Main.config.title }}</h3>
+        <hr/>
     </div>
     <div class="row">
-        <div ui-view></div>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <p>{{ Main.config.text }}</p>
+            <div ui-view></div>
+        </div>
+        <div class="col-lg-3"></div>
     </div>
     <footer class="footer">
         <hr/>
-        <small>Copyright CA Technologies - Labs EMEA</small>
+        <small>Copyright &copy; CA Technologies - Labs EMEA</small>
     </footer>
 </div>
 </body>
