@@ -97,7 +97,7 @@
     "label": "Please write down if you consider another languages",
     "placeholder": "chinese",
     "expressionProperties": {
-      "hide": "model.Q2 !== 'more'"
+      "hide": "!model.Q2.more"
     }
   },
   {
