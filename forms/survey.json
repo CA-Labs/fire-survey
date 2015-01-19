@@ -86,20 +86,19 @@
       },
       {
         "name": "more",
-        "value": "more",
-        "key": "checkThis"
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "text",
-        "line": 4,
-        "label": "Please write down supported extra languages in seperated lines",
-        "placeholder": "chinese",
-        "expressionProperties": {
-          "hide": "!model.checkThis"
-        }
+        "value": "more"
       }
     ]
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "line": 4,
+    "label": "Please write down if you consider another languages",
+    "placeholder": "chinese",
+    "expressionProperties": {
+     "hide": "model.Q2 !== 'more'"
+    }
   },
   {
     "key": "Q3",
@@ -606,7 +605,7 @@
         "key": "hiddenWhenUnchecked",
         "type": "number",
         "label": "would you please to write associated percentage average?",
-        "description":"percentage",
+        "description": "percentage",
         "expressionProperties": {
           "hide": "!model.check3Month"
         }
@@ -620,7 +619,7 @@
         "key": "hiddenWhenUnchecked",
         "type": "number",
         "label": "would you please to write associated percentage average?",
-        "description":"percentage",
+        "description": "percentage",
         "expressionProperties": {
           "hide": "!model.check6Month"
         }
@@ -634,7 +633,7 @@
         "key": "hiddenWhenUnchecked",
         "type": "number",
         "label": "would you please to write associated percentage average?",
-        "description":"percentage",
+        "description": "percentage",
         "expressionProperties": {
           "hide": "!model.check1Year"
         }
