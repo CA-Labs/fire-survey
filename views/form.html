@@ -9,7 +9,7 @@
     </button>
 </div>
 <div ng-hide="Form.error">
-    <div class="panel">
+    <div class="panel" ng-show="Main.debug">
         <div class="panel-heading">Data</div>
         <div class="panel-body">
             {{ Form.formData }}
