@@ -13,7 +13,7 @@ angular.module('fire-survey', [
     .config(ApplicationConfig)
     .constant('Configuration', {
         "title": "Fire Survey"
-        , "text": ""
+        , "text": "fsdfsdfdsfsdfsd fds "
     })
     .constant('FirebaseConfig', {
         url: 'https://ca-fire-survey.firebaseio.com/'
