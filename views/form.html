@@ -16,8 +16,8 @@
         </div>
 
     </div>
-    <formly-form model="Form.formData" fields="Form.formFields">
-        <button ng-click="Form.submit()" type="submit" class="btn btn-primary pull-right">Submit</button>
+    <formly-form model="Form.formData" fields="Form.formFields" form="inputForm">
+        <button ng-click="Form.submit()" type="submit" class="btn btn-primary pull-right" ng-disabled="inputForm.$invalid">Submit</button>
         <a class="btn btn-default" ng-click="Form.clean()">Cancel</a>
     </formly-form>
 </div>
