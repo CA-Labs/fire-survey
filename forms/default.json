@@ -86,20 +86,19 @@
       },
       {
         "name": "more",
-        "value": "more",
-        "key": "checkThis"
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "text",
-        "line": 4,
-        "label": "Please write down supported extra languages in seperated lines",
-        "placeholder": "chinese",
-        "expressionProperties": {
-          "hide": "!model.checkThis"
-        }
+        "value": "more"
       }
     ]
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "line": 4,
+    "label": "Please write down if you consider another languages",
+    "placeholder": "chinese",
+    "expressionProperties": {
+      "hide": "model.Q2 !== 'more'"
+    }
   },
   {
     "key": "Q3",
@@ -306,7 +305,7 @@
       },
       {
         "key": "hiddenWhenUnchecked",
-        "type": "multi-checkbox",
+        "type": "checkbox",
         "label": "Which type of back up are your company used?",
         "placeholder": "application",
         "options": [
@@ -327,18 +326,8 @@
             "value": "snapshot"
           },
           {
-            "key":"checkOther",
             "name": "other",
             "value": "otherother"
-          },
-          {
-            "key": "hiddenWhenUnchecked",
-            "type": "text",
-            "line": 4,
-            "label": "Please write down additional backp type which your company is used",
-            "expressionProperties": {
-              "hide": "!model.checkOther"
-            }
           }
         ],
         "expressionProperties": {
@@ -453,7 +442,7 @@
       },
       {
         "key": "hiddenWhenUnchecked",
-        "type": "multi-checkbox",
+        "type": "checkbox",
         "label": "How Would customers data be encrypted?",
         "options": [
           {
@@ -490,7 +479,7 @@
   },
   {
     "key": "Q20",
-    "type": "multi-checkbox",
+    "type": "checkbox",
     "label": "Which of the certificates guarantee physical security are held by organization?",
     "description": "Please write missing certifications if it is not listed below.",
     "options": [
@@ -604,7 +593,7 @@
   },
   {
     "key": "Q25",
-    "type": "multi-checkbox",
+    "type": "checkbox",
     "label": "What is total average downtime for the last three month-six month-one year?",
     "options": [
       {
