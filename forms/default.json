@@ -180,17 +180,18 @@
         "key": "checkOthere",
         "name": "other",
         "value": "other"
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "number",
-        "label": "Please write down here maximum expected delay after requesting services",
-        "placeholder": "12",
-        "expressionProperties": {
-          "hide": "!model.checkOthere"
-        }
       }
     ]
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "line": 4,
+    "label": "Please write down if you consider another languages",
+    "placeholder": "chinese",
+    "expressionProperties": {
+      "hide": "model.Q2 !== 'more'"
+    }
   },
   {
     "key": "Q7",
