@@ -2,14 +2,12 @@
   {
     "key": "firstName",
     "type": "text",
-    "label": "First Name",
-    "placeholder": "Jane"
+    "label": "First Name"
   },
   {
     "key": "lastName",
     "type": "text",
-    "label": "Last Name",
-    "placeholder": "Doe"
+    "label": "Last Name"
   },
   {
     "key": "companyName",
@@ -49,7 +47,6 @@
   {
     "key": "email",
     "type": "email",
-    "placeholder": "juanAntonio@gmail.com",
     "required": true
   },
   {
@@ -92,7 +89,7 @@
   },
   {
     "key": "hiddenWhenUnchecked",
-    "type": "text",
+    "type": "well-text",
     "line": 4,
     "label": "Please write down if you consider another languages",
     "placeholder": "chinese",
@@ -119,7 +116,7 @@
   {
     "key": "Q4",
     "type": "radio",
-    "label": ".4. How long is the maximum expected delay between the support request and response time?",
+    "label": "4. How long is the maximum expected delay between the support request and response time?",
     "description": "Answer should be in average of hourly",
     "options": [
       {
@@ -146,7 +143,7 @@
   },
   {
     "key": "hiddenWhenUnchecked",
-    "type": "text",
+    "type": "well-text",
     "line": 4,
     "label":"Please write down here maximum daily delay after support request",
     "placeholder": "12",
@@ -196,7 +193,7 @@
   },
   {
     "key": "hiddenWhenUnchecked",
-    "type": "text",
+    "type": "well-text",
     "line": 4,
     "label":"Please write down here maximum expected daily delay after requesting services",
     "placeholder": "12",
@@ -243,7 +240,7 @@
   },
   {
     "key": "hiddenWhenUnchecked",
-    "type": "text",
+    "type": "well-text",
     "line": 4,
     "label": "Please write If there is any kind of exception in order to access to log.",
     "expressionProperties": {
@@ -288,8 +285,7 @@
       {
 
         "name": "Yes",
-        "value": "yes",
-        "description": "If your answer is yes,..."
+        "value": "yes"
       },
       {
         "name": "No",
@@ -299,7 +295,7 @@
   },
   {
     "key": "hiddenWhenUnchecked",
-    "type": "text",
+    "type": "well-text",
     "label": "Where are the locations for the multiple site infrastructure?",
     "placeholder": "san francisco",
     "expressionProperties": {
@@ -315,8 +311,7 @@
       {
 
         "name": "Yes",
-        "value": "yes",
-        "description": "If yes,then .. "
+        "value": "yes"
       },
 
       {
@@ -471,7 +466,7 @@
   },
   {
     "key": "Q19hiddenWhenUnchecked",
-    "type": "multi-checkbox",
+    "type": "well-multi-checkbox",
     "label": "How Would customers data be encrypted?",
     "options": [
       {
@@ -494,7 +489,7 @@
   },
   {
     "key": "Q19hiddenWhenUncheckedOther",
-    "type": "text",
+    "type": "well-text",
     "label": "Please write down if your company are using other types of data encryption?",
     "expressionProperties": {
       "hide": "!model.Q19hiddenWhenUnchecked.Other"
@@ -555,7 +550,7 @@
   },
   {
     "key": "hiddenWhenUnchecked",
-    "type": "text",
+    "type": "well-text",
     "label": "would you please to write rest of the certifications which you have?",
     "placeholder": "Multi-Tier Cloud Security (MTCS)",
     "expressionProperties": {
@@ -565,10 +560,10 @@
   },
   {
     "key": "Q21",
-    "type": "text",
-    "line": 5,
+    "type": "textarea",
+    "line": 15,
     "label": "21. What sort of firewalls and detection systems are in operation to guard against malicious network activity or system attacks?",
-    "description": "Please enter sort of firewalls and detection systems which your company use in the seperate line."
+    "description": "Please enter sort of firewalls and detection systems which your company use in the separate line."
   },
   {
     "key": "Q22",
@@ -637,7 +632,7 @@
   },
   {
     "key": "hiddenWhenUnchecked",
-    "type": "number",
+    "type": "well-number",
     "label": "would you please to write associated percentage average?",
     "description": "percentage",
     "expressionProperties": {
@@ -647,7 +642,7 @@
 
   {
     "key": "hiddenWhenUnchecked",
-    "type": "number",
+    "type": "well-number",
     "label": "would you please to write associated percentage average?",
     "description": "percentage",
     "expressionProperties": {
@@ -656,7 +651,7 @@
   },
   {
     "key": "hiddenWhenUnchecked",
-    "type": "number",
+    "type": "well-number",
     "label": "would you please to write associated percentage average?",
     "description": "percentage",
     "expressionProperties": {
@@ -675,13 +670,13 @@
       {
         "name": "No",
         "value": "no",
-        "description": "if your answer is negative..."
+        "description": "if your answer is negative,"
       }
     ]
   },
   {
     "key": "hiddenWhenUnchecked",
-    "type": "text",
+    "type": "well-text",
     "label": "would you please to write all the cloud services which are not available in all the regions?",
     "placeholder": "Ec2",
     "expressionProperties": {
