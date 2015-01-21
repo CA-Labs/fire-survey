@@ -97,7 +97,7 @@
     "label": "Please write down if you consider another languages",
     "placeholder": "chinese",
     "expressionProperties": {
-      "hide": "!model.Q2.more"
+      "hide": "model.Q2 !== 'more'"
     }
   },
   {
@@ -131,11 +131,11 @@
       },
       {
         "name": "24h",
-        "value": "twentyfourHours"
+        "value": "twentyFourHours"
       },
       {
         "name": "48h",
-        "value": "fourtyeightHours"
+        "value": "fourtyEightHours"
       },
       {
         "name": "more",
@@ -189,8 +189,7 @@
     "label":"Please write down here maximum expected daily delay after requesting services",
     "placeholder": "12",
     "expressionProperties": {
-      "hide": "model.Q6 !== 'other'",
-      "hide": "!model.Q6.other"
+      "hide": "model.Q6 !== 'other'"
     }
   },
   {
@@ -235,8 +234,7 @@
     "line": 4,
     "label": "Please write If there is any kind of exception in order to access to log.",
     "expressionProperties": {
-      "hide": "model.Q8 !== 'yes'",
-      "hide": "!model.Q8.yes"
+      "hide": "model.Q8 !== 'yes'"
     }
   },
   {
@@ -292,8 +290,7 @@
     "label": "Where are the locations for the multiple site infrastructure?",
     "placeholder": "san francisco",
     "expressionProperties": {
-      "hide": "model.Q11 !== 'yes'",
-      "hide": "!model.Q11.yes"
+      "hide": "model.Q11 !== 'yes'"
     }
   },
   {
@@ -317,7 +314,7 @@
   {
     "key": "hiddenWhenUnchecked",
     "type": "multi-checkbox",
-    "label": "Which type of back up are your company used?",
+    "label": "What type of back up are your company used?",
     "placeholder": "application",
     "options": [
       {
@@ -342,8 +339,7 @@
       }
     ],
     "expressionProperties": {
-      "hide": "model.Q12 !== 'yes'",
-      "hide": "!model.Q12.yes"
+      "hide": "model.Q12 !== 'yes'"
     }
   },
   {
@@ -379,7 +375,7 @@
   {
     "key": "Q15",
     "type": "radio",
-    "label": "Does your organization support any ssl certicates for customers?",
+    "label": "Does your organization support any ssl certificates for customers?",
     "options": [
       {
         "name": "Yes",
@@ -439,7 +435,7 @@
   {
     "key": "Q19",
     "type": "radio",
-    "label": "Does your organization provide data encription for the customers?",
+    "label": "Does your organization provide data encryption for the customers?",
     "options": [
       {
         "name": "Yes",
@@ -452,7 +448,7 @@
     ]
   },
   {
-    "key": "hiddenWhenUnchecked",
+    "key": "Q19hiddenWhenUnchecked",
     "type": "multi-checkbox",
     "label": "How Would customers data be encrypted?",
     "options": [
@@ -475,12 +471,11 @@
     }
   },
   {
-    "key": "hiddenWhenUnchecked",
+    "key": "Q19hiddenWhenUncheckedOther",
     "type": "text",
     "label": "Please write down if your company are using other types of data encryption?",
     "expressionProperties": {
-      "hide": "model.Q19 !== 'other'",
-      "hide": "!model.Q19.other"
+      "hide": "!model.Q19hiddenWhenUnchecked.Other"
     }
   },
   {
@@ -533,25 +528,25 @@
 
         "name": "other",
         "value": "other"
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "text",
-        "label": "would you please to write rest of the certifications which you have?",
-        "placeholder": "Multi-Tier Cloud Security (MTCS)",
-        "expressionProperties": {
-          "hide": "model.Q20 !== 'other'",
-          "hide": "!model.Q20.other"
-        }
       }
     ]
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "label": "would you please to write rest of the certifications which you have?",
+    "placeholder": "Multi-Tier Cloud Security (MTCS)",
+    "expressionProperties": {
+      "hide": "model.Q20 !== 'other'",
+      "hide": "!model.Q20.other"
+    }
   },
   {
     "key": "Q21",
     "type": "text",
     "line": 5,
     "label": "What sort of firewalls and detection systems are in operation to guard against malicious network activity or system attacks?",
-    "description": "Please enter sort of firewalls and detection systems which your company use in the seperate line."
+    "description": "Please enter sort of firewalls and detection systems which your company use in the separate line."
   },
   {
     "key": "Q22",
@@ -604,51 +599,47 @@
     "label": "What is total average downtime for the last three month-six month-one year?",
     "options": [
       {
-
         "name": "Three-month",
         "value": "threeMonth"
       },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "number",
-        "label": "would you please to write associated percentage average?",
-        "description": "percentage",
-        "expressionProperties": {
-          "hide": "model.Q25 !== 'threeMonth'",
-          "hide": "!model.Q25.threeMonth"
-        }
-      },
-      {
 
+      {
         "name": "Six-month",
         "value": "sixMonth"
       },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "number",
-        "label": "would you please to write associated percentage average?",
-        "description": "percentage",
-        "expressionProperties": {
-          "hide": "model.Q25 !== 'sixMonth'",
-          "hide": "!model.Q25.sixMonth"
-        }
-      },
-      {
 
+      {
         "name": "One-year",
         "value": "oneYear"
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "number",
-        "label": "would you please to write associated percentage average?",
-        "description": "percentage",
-        "expressionProperties": {
-          "hide": "model.Q25 !== 'oneYear'",
-          "hide": "!model.Q25.oneYear"
-        }
       }
     ]
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "number",
+    "label": "would you please to write associated percentage average?",
+    "description": "percentage",
+    "expressionProperties": {
+      "hide": "!model.Q25['Three-month']"
+    }
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "number",
+    "label": "would you please to write associated percentage average?",
+    "description": "percentage",
+    "expressionProperties": {
+      "hide": "!model.Q25['Six-month']"
+    }
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "number",
+    "label": "would you please to write associated percentage average?",
+    "description": "percentage",
+    "expressionProperties": {
+      "hide": "!model.Q25['One-year']"
+    }
   },
   {
     "key": "Q26",
@@ -664,17 +655,17 @@
         "name": "No",
         "value": "no",
         "description": "if your answer is negative..."
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "text",
-        "label": "would you please to write all the cloud services which are not available in all the regions?",
-        "placeholder": "Ec2",
-        "expressionProperties": {
-          "hide": "model.Q26 !== 'no'",
-          "hide": "!model.Q26.no"
-        }
       }
     ]
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "label": "would you please to write all the cloud services which are not available in all the regions?",
+    "placeholder": "Ec2",
+    "expressionProperties": {
+      "hide": "model.Q26 !== 'no'",
+      "hide": "!model.Q26.no"
+    }
   }
 ]
