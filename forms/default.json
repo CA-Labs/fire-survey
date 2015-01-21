@@ -327,7 +327,7 @@
   },
   {
     "key": "Q12hiddenWhenUnchecked",
-    "type": "multi-checkbox",
+    "type": "well-multi-checkbox",
     "label": "Which type of back up are your company used?",
     "placeholder": "application",
     "options": [
@@ -358,7 +358,7 @@
   },
   {
     "key": "hiddenWhenUnchecked",
-    "type": "text",
+    "type": "well-text",
     "label": "Please write down if your company are using other types of data encryption?",
     "expressionProperties": {
       "hide": "!model.Q12hiddenWhenUnchecked.other"
