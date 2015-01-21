@@ -59,11 +59,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -107,11 +107,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -150,11 +150,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -177,7 +177,6 @@
         "value": "threeDay"
       },
       {
-        "key": "checkOthere",
         "name": "other",
         "value": "other"
       }
@@ -187,10 +186,11 @@
     "key": "hiddenWhenUnchecked",
     "type": "text",
     "line": 4,
-    "label": "Please write down if you consider another languages",
-    "placeholder": "chinese",
+    "label":"Please write down here maximum expected daily delay after requesting services",
+    "placeholder": "12",
     "expressionProperties": {
-      "hide": "model.Q2 !== 'more'"
+      "hide": "model.Q6 !== 'other'",
+      "hide": "!model.Q6.other"
     }
   },
   {
@@ -219,23 +219,25 @@
     "description": "This is include any kind of log such as security code and so on.",
     "options": [
       {
-        "key": "checkYes",
+
         "name": "Yes",
-        "value": "yesyes"
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "text",
-        "label": "Please write If there is any kind of exception in order to  access to log.",
-        "expressionProperties": {
-          "hide": "!model.checkYes"
-        }
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "line": 4,
+    "label": "Please write If there is any kind of exception in order to access to log.",
+    "expressionProperties": {
+      "hide": "model.Q8 !== 'yes'",
+      "hide": "!model.Q8.yes"
+    }
   },
   {
     "key": "Q9",
@@ -244,11 +246,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -259,11 +261,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -273,25 +275,26 @@
     "label": "Does your organization provide multiple site infrastructure?",
     "options": [
       {
-        "key": "checkYes",
+
         "name": "Yes",
-        "value": "yesyes",
+        "value": "yes",
         "description": "If your answer is yes,..."
       },
       {
-        "key": "hiddenWhenUnchecked",
-        "type": "text",
-        "label": "Where are the locations for the multiple site infrastructure?",
-        "placeholder": "san francisco",
-        "expressionProperties": {
-          "hide": "!model.checkYes"
-        }
-      },
-      {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "label": "Where are the locations for the multiple site infrastructure?",
+    "placeholder": "san francisco",
+    "expressionProperties": {
+      "hide": "model.Q11 !== 'yes'",
+      "hide": "!model.Q11.yes"
+    }
   },
   {
     "key": "Q12",
@@ -299,47 +302,49 @@
     "label": "Does your company provide backup?",
     "options": [
       {
-        "key": "checkYes",
+
         "name": "Yes",
-        "value": "yesyes",
+        "value": "yes",
         "description": "If yes,then .. "
       },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "checkbox",
-        "label": "Which type of back up are your company used?",
-        "placeholder": "application",
-        "options": [
-          {
-            "name": "application",
-            "value": "app"
-          },
-          {
-            "name": "file",
-            "value": "file"
-          },
-          {
-            "name": "block",
-            "value": "block"
-          },
-          {
-            "name": "snapshot",
-            "value": "snapshot"
-          },
-          {
-            "name": "other",
-            "value": "otherother"
-          }
-        ],
-        "expressionProperties": {
-          "hide": "!model.checkYes"
-        }
-      },
+
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "multi-checkbox",
+    "label": "Which type of back up are your company used?",
+    "placeholder": "application",
+    "options": [
+      {
+        "name": "application",
+        "value": "app"
+      },
+      {
+        "name": "file",
+        "value": "file"
+      },
+      {
+        "name": "block",
+        "value": "block"
+      },
+      {
+        "name": "snapshot",
+        "value": "snapshot"
+      },
+      {
+        "name": "other",
+        "value": "other"
+      }
+    ],
+    "expressionProperties": {
+      "hide": "model.Q12 !== 'yes'",
+      "hide": "!model.Q12.yes"
+    }
   },
   {
     "key": "Q13",
@@ -348,11 +353,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -363,11 +368,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -378,11 +383,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -393,11 +398,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -408,11 +413,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -423,11 +428,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -437,50 +442,50 @@
     "label": "Does your organization provide data encription for the customers?",
     "options": [
       {
-        "key": "checkYes",
         "name": "Yes",
-        "value": "yesyes"
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "checkbox",
-        "label": "How Would customers data be encrypted?",
-        "options": [
-          {
-            "name": "In storage",
-            "value": "inStorage"
-          },
-          {
-            "name": "being transmitted over the Internet",
-            "value": "transmitOverIE"
-          },
-          {
-            "key": "checkOther",
-            "name": "Other",
-            "value": "Other"
-          },
-          {
-            "key": "hiddenWhenUnchecked",
-            "type": "text",
-            "label": "Please write down if your company are using other types of data encryption?",
-            "expressionProperties": {
-              "hide": "!model.checkOther"
-            }
-          }
-        ],
-        "expressionProperties": {
-          "hide": "!model.checkYes"
-        }
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
+    "key": "hiddenWhenUnchecked",
+    "type": "multi-checkbox",
+    "label": "How Would customers data be encrypted?",
+    "options": [
+      {
+        "name": "In storage",
+        "value": "inStorage"
+      },
+      {
+        "name": "being transmitted over the Internet",
+        "value": "transmitOverIE"
+      },
+      {
+
+        "name": "Other",
+        "value": "Other"
+      }
+    ],
+    "expressionProperties": {
+      "hide": "model.Q19 !== 'yes'"
+    }
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "label": "Please write down if your company are using other types of data encryption?",
+    "expressionProperties": {
+      "hide": "model.Q19 !== 'other'",
+      "hide": "!model.Q19.other"
+    }
+  },
+  {
     "key": "Q20",
-    "type": "checkbox",
+    "type": "multi-checkbox",
     "label": "Which of the certificates guarantee physical security are held by organization?",
     "description": "Please write missing certifications if it is not listed below.",
     "options": [
@@ -525,7 +530,7 @@
         "value": "SAFEHARBOR"
       },
       {
-        "key": "checkOther",
+
         "name": "other",
         "value": "other"
       },
@@ -535,7 +540,8 @@
         "label": "would you please to write rest of the certifications which you have?",
         "placeholder": "Multi-Tier Cloud Security (MTCS)",
         "expressionProperties": {
-          "hide": "!model.checkOther"
+          "hide": "model.Q20 !== 'other'",
+          "hide": "!model.Q20.other"
         }
       }
     ]
@@ -554,11 +560,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -569,11 +575,11 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
@@ -584,21 +590,21 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q25",
-    "type": "checkbox",
+    "type": "multi-checkbox",
     "label": "What is total average downtime for the last three month-six month-one year?",
     "options": [
       {
-        "Key": "check3Month",
+
         "name": "Three-month",
         "value": "threeMonth"
       },
@@ -608,11 +614,12 @@
         "label": "would you please to write associated percentage average?",
         "description": "percentage",
         "expressionProperties": {
-          "hide": "!model.check3Month"
+          "hide": "model.Q25 !== 'threeMonth'",
+          "hide": "!model.Q25.threeMonth"
         }
       },
       {
-        "Key": "check6Month",
+
         "name": "Six-month",
         "value": "sixMonth"
       },
@@ -622,11 +629,12 @@
         "label": "would you please to write associated percentage average?",
         "description": "percentage",
         "expressionProperties": {
-          "hide": "!model.check6Month"
+          "hide": "model.Q25 !== 'sixMonth'",
+          "hide": "!model.Q25.sixMonth"
         }
       },
       {
-        "Key": "check1Year",
+
         "name": "One-year",
         "value": "oneYear"
       },
@@ -636,7 +644,8 @@
         "label": "would you please to write associated percentage average?",
         "description": "percentage",
         "expressionProperties": {
-          "hide": "!model.check1Year"
+          "hide": "model.Q25 !== 'oneYear'",
+          "hide": "!model.Q25.oneYear"
         }
       }
     ]
@@ -648,12 +657,12 @@
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
-        "key": "checkNo",
+
         "name": "No",
-        "value": "nono",
+        "value": "no",
         "description": "if your answer is negative..."
       },
       {
@@ -662,7 +671,8 @@
         "label": "would you please to write all the cloud services which are not available in all the regions?",
         "placeholder": "Ec2",
         "expressionProperties": {
-          "hide": "!model.checkNo"
+          "hide": "model.Q26 !== 'no'",
+          "hide": "!model.Q26.no"
         }
       }
     ]
