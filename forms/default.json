@@ -55,22 +55,22 @@
   {
     "key": "Q1",
     "type": "radio",
-    "label": "Does your firm provide support for none technical problem of the users?",
+    "label": "1.  Does your firm provide support for none technical problem of the users?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q2",
     "type": "multi-checkbox",
-    "label": "In what languages does your firm provide live chat support?",
+    "label": "2.  In what languages does your firm provide live chat support?",
     "options": [
       {
         "name": "english",
@@ -97,28 +97,29 @@
     "label": "Please write down if you consider another languages",
     "placeholder": "chinese",
     "expressionProperties": {
+      "hide": "model.Q2 !== 'more'",
       "hide": "!model.Q2.more"
     }
   },
   {
     "key": "Q3",
     "type": "radio",
-    "label": "Does your firm officially support user community formation?",
+    "label": "3.  Does your firm officially support user community formation?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q4",
     "type": "radio",
-    "label": "How long is the maximum expected delay between the support request and response time?",
+    "label": ".4. How long is the maximum expected delay between the support request and response time?",
     "description": "Answer should be in average of hourly",
     "options": [
       {
@@ -144,24 +145,35 @@
     ]
   },
   {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "line": 4,
+    "label":"Please write down here maximum daily delay after support request",
+    "placeholder": "12",
+    "expressionProperties": {
+      "hide": "model.Q4 !== 'more'"
+
+    }
+  },
+  {
     "key": "Q5",
     "type": "radio",
-    "label": "Is your company providing financial report?",
+    "label": "5.  Is your company providing financial report?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q6",
     "type": "radio",
-    "label": "How long is the maximum expected delay between the service request and service delivery?",
+    "label": "6.  How long is the maximum expected delay between the service request and service delivery?",
     "description": "Answer should be base on daily average",
     "options": [
       {
@@ -177,7 +189,6 @@
         "value": "threeDay"
       },
       {
-        "key": "checkOthere",
         "name": "other",
         "value": "other"
       }
@@ -187,16 +198,17 @@
     "key": "hiddenWhenUnchecked",
     "type": "text",
     "line": 4,
-    "label": "Please write down if you consider another languages",
-    "placeholder": "chinese",
+    "label":"Please write down here maximum expected daily delay after requesting services",
+    "placeholder": "12",
     "expressionProperties": {
-      "hide": "model.Q2 !== 'more'"
+      "hide": "model.Q6 !== 'other'"
+
     }
   },
   {
     "key": "Q7",
     "type": "radio",
-    "label": "Does your organization support scaling?",
+    "label": "7.  Does your organization support scaling?",
     "options": [
       {
         "name": "Horizontal",
@@ -215,273 +227,283 @@
   {
     "key": "Q8",
     "type": "radio",
-    "label": "Does your organization give any possibility to customers in order to access to logs?",
+    "label": "8.  Does your organization give any possibility to customers in order to access to logs?",
     "description": "This is include any kind of log such as security code and so on.",
     "options": [
       {
-        "key": "checkYes",
+
         "name": "Yes",
-        "value": "yesyes"
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "text",
-        "label": "Please write If there is any kind of exception in order to  access to log.",
-        "expressionProperties": {
-          "hide": "!model.checkYes"
-        }
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "line": 4,
+    "label": "Please write If there is any kind of exception in order to access to log.",
+    "expressionProperties": {
+      "hide": "model.Q8 !== 'yes'"
+    }
+  },
+  {
     "key": "Q9",
     "type": "radio",
-    "label": "Does your organization provide monitoring services for the customer?",
+    "label": "9.  Does your organization provide monitoring services for the customer?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q10",
     "type": "radio",
-    "label": "Does your organization give any possibility for NoSql database sharding?",
+    "label": "10. Does your organization give any possibility for NoSql database sharding?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q11",
     "type": "radio",
-    "label": "Does your organization provide multiple site infrastructure?",
+    "label": "11. Does your organization provide multiple site infrastructure?",
     "options": [
       {
-        "key": "checkYes",
+
         "name": "Yes",
-        "value": "yesyes",
+        "value": "yes",
         "description": "If your answer is yes,..."
       },
       {
-        "key": "hiddenWhenUnchecked",
-        "type": "text",
-        "label": "Where are the locations for the multiple site infrastructure?",
-        "placeholder": "san francisco",
-        "expressionProperties": {
-          "hide": "!model.checkYes"
-        }
-      },
-      {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "label": "Where are the locations for the multiple site infrastructure?",
+    "placeholder": "san francisco",
+    "expressionProperties": {
+      "hide": "model.Q11 !== 'yes'"
+    }
+  },
+
+  {
     "key": "Q12",
     "type": "radio",
-    "label": "Does your company provide backup?",
+    "label": "12. Does your company provide backup?",
     "options": [
       {
-        "key": "checkYes",
+
         "name": "Yes",
-        "value": "yesyes",
+        "value": "yes",
         "description": "If yes,then .. "
       },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "checkbox",
-        "label": "Which type of back up are your company used?",
-        "placeholder": "application",
-        "options": [
-          {
-            "name": "application",
-            "value": "app"
-          },
-          {
-            "name": "file",
-            "value": "file"
-          },
-          {
-            "name": "block",
-            "value": "block"
-          },
-          {
-            "name": "snapshot",
-            "value": "snapshot"
-          },
-          {
-            "name": "other",
-            "value": "otherother"
-          }
-        ],
-        "expressionProperties": {
-          "hide": "!model.checkYes"
-        }
-      },
+
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
+  },
+  {
+    "key": "Q12hiddenWhenUnchecked",
+    "type": "multi-checkbox",
+    "label": "Which type of back up are your company used?",
+    "placeholder": "application",
+    "options": [
+      {
+        "name": "application",
+        "value": "app"
+      },
+      {
+        "name": "file",
+        "value": "file"
+      },
+      {
+        "name": "block",
+        "value": "block"
+      },
+      {
+        "name": "snapshot",
+        "value": "snapshot"
+      },
+      {
+        "name": "other",
+        "value": "other"
+      }
+    ],
+    "expressionProperties": {
+      "hide": "model.Q12 !== 'yes'"
+    }
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "label": "Please write down if your company are using other types of data encryption?",
+    "expressionProperties": {
+      "hide": "!model.Q12hiddenWhenUnchecked.other"
+    }
   },
   {
     "key": "Q13",
     "type": "radio",
-    "label": "Does your company allow customers to perform their own backups?",
+    "label": "13. Does your company allow customers to perform their own backups?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q14",
     "type": "radio",
-    "label": "Does your organization provide VPC networks for the customers?",
+    "label": "14. Does your organization provide VPC networks for the customers?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q15",
     "type": "radio",
-    "label": "Does your organization support any ssl certicates for customers?",
+    "label": "15. Does your organization support any ssl certicates for customers?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q16",
     "type": "radio",
-    "label": "Does your organization support content delivery for customers?",
+    "label": "16. Does your organization support content delivery for customers?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q17",
     "type": "radio",
-    "label": "Does your organization support dedicated IP Custom SSL for the customers?",
+    "label": "17. Does your organization support dedicated IP Custom SSL for the customers?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q18",
     "type": "radio",
-    "label": "Does your organization support SSH connection for the customers?",
+    "label": "18. Does your organization support SSH connection for the customers?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q19",
     "type": "radio",
-    "label": "Does your organization provide data encription for the customers?",
+    "label": "19. Does your organization provide data encryption for the customers?",
     "options": [
       {
-        "key": "checkYes",
         "name": "Yes",
-        "value": "yesyes"
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "checkbox",
-        "label": "How Would customers data be encrypted?",
-        "options": [
-          {
-            "name": "In storage",
-            "value": "inStorage"
-          },
-          {
-            "name": "being transmitted over the Internet",
-            "value": "transmitOverIE"
-          },
-          {
-            "key": "checkOther",
-            "name": "Other",
-            "value": "Other"
-          },
-          {
-            "key": "hiddenWhenUnchecked",
-            "type": "text",
-            "label": "Please write down if your company are using other types of data encryption?",
-            "expressionProperties": {
-              "hide": "!model.checkOther"
-            }
-          }
-        ],
-        "expressionProperties": {
-          "hide": "!model.checkYes"
-        }
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
+    "key": "Q19hiddenWhenUnchecked",
+    "type": "multi-checkbox",
+    "label": "How Would customers data be encrypted?",
+    "options": [
+      {
+        "name": "In storage",
+        "value": "inStorage"
+      },
+      {
+        "name": "being transmitted over the Internet",
+        "value": "transmitOverIE"
+      },
+      {
+
+        "name": "Other",
+        "value": "Other"
+      }
+    ],
+    "expressionProperties": {
+      "hide": "model.Q19 !== 'yes'"
+    }
+  },
+  {
+    "key": "Q19hiddenWhenUncheckedOther",
+    "type": "text",
+    "label": "Please write down if your company are using other types of data encryption?",
+    "expressionProperties": {
+      "hide": "!model.Q19hiddenWhenUnchecked.Other"
+    }
+  },
+  {
     "key": "Q20",
-    "type": "checkbox",
-    "label": "Which of the certificates guarantee physical security are held by organization?",
+    "type": "multi-checkbox",
+    "label": "20. Which of the certificates guarantee physical security are held by organization?",
     "description": "Please write missing certifications if it is not listed below.",
     "options": [
       {
@@ -525,146 +547,145 @@
         "value": "SAFEHARBOR"
       },
       {
-        "key": "checkOther",
+
         "name": "other",
         "value": "other"
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "text",
-        "label": "would you please to write rest of the certifications which you have?",
-        "placeholder": "Multi-Tier Cloud Security (MTCS)",
-        "expressionProperties": {
-          "hide": "!model.checkOther"
-        }
       }
     ]
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "label": "would you please to write rest of the certifications which you have?",
+    "placeholder": "Multi-Tier Cloud Security (MTCS)",
+    "expressionProperties": {
+      "hide": "model.Q20 !== 'other'",
+      "hide": "!model.Q20.other"
+    }
   },
   {
     "key": "Q21",
     "type": "text",
     "line": 5,
-    "label": "What sort of firewalls and detection systems are in operation to guard against malicious network activity or system attacks?",
+    "label": "21. What sort of firewalls and detection systems are in operation to guard against malicious network activity or system attacks?",
     "description": "Please enter sort of firewalls and detection systems which your company use in the seperate line."
   },
   {
     "key": "Q22",
     "type": "radio",
-    "label": "Does your organization consider incident response plan in case of the aftermath of a security breach or attack?",
+    "label": "22. Does your organization consider incident response plan in case of the aftermath of a security breach or attack?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q23",
     "type": "radio",
-    "label": "Does your organization allows customers to implement their own security architecture?",
+    "label": "23. Does your organization allows customers to implement their own security architecture?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q24",
     "type": "radio",
-    "label": "Does your organization allow customers to secure and manage access from clients such as PC and mobile devices?",
+    "label": "24. Does your organization allow customers to secure and manage access from clients such as PC and mobile devices?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
         "name": "No",
-        "value": "nono"
+        "value": "no"
       }
     ]
   },
   {
     "key": "Q25",
-    "type": "checkbox",
-    "label": "What is total average downtime for the last three month-six month-one year?",
+    "type": "multi-checkbox",
+    "label": "25. What is total average downtime for the last three month-six month-one year?",
     "options": [
       {
-        "Key": "check3Month",
+
         "name": "Three-month",
         "value": "threeMonth"
       },
       {
-        "key": "hiddenWhenUnchecked",
-        "type": "number",
-        "label": "would you please to write associated percentage average?",
-        "description": "percentage",
-        "expressionProperties": {
-          "hide": "!model.check3Month"
-        }
-      },
-      {
-        "Key": "check6Month",
         "name": "Six-month",
         "value": "sixMonth"
       },
       {
-        "key": "hiddenWhenUnchecked",
-        "type": "number",
-        "label": "would you please to write associated percentage average?",
-        "description": "percentage",
-        "expressionProperties": {
-          "hide": "!model.check6Month"
-        }
-      },
-      {
-        "Key": "check1Year",
         "name": "One-year",
         "value": "oneYear"
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "number",
-        "label": "would you please to write associated percentage average?",
-        "description": "percentage",
-        "expressionProperties": {
-          "hide": "!model.check1Year"
-        }
       }
     ]
   },
   {
+    "key": "hiddenWhenUnchecked",
+    "type": "number",
+    "label": "would you please to write associated percentage average?",
+    "description": "percentage",
+    "expressionProperties": {
+     "hide": "!model.Q25['Three-month']"
+    }
+  },
+
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "number",
+    "label": "would you please to write associated percentage average?",
+    "description": "percentage",
+    "expressionProperties": {
+    "hide": "!model.Q25['Six-month']"
+    }
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "number",
+    "label": "would you please to write associated percentage average?",
+    "description": "percentage",
+    "expressionProperties": {
+    "hide": "!model.Q25['One-year']"
+    }
+  },
+  {
     "key": "Q26",
     "type": "radio",
-    "label": "Are all the cloud services available in all the regions?",
+    "label": "26. Are all the cloud services available in all the regions?",
     "options": [
       {
         "name": "Yes",
-        "value": "yesyes"
+        "value": "yes"
       },
       {
-        "key": "checkNo",
         "name": "No",
-        "value": "nono",
+        "value": "no",
         "description": "if your answer is negative..."
-      },
-      {
-        "key": "hiddenWhenUnchecked",
-        "type": "text",
-        "label": "would you please to write all the cloud services which are not available in all the regions?",
-        "placeholder": "Ec2",
-        "expressionProperties": {
-          "hide": "!model.checkNo"
-        }
       }
     ]
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "text",
+    "label": "would you please to write all the cloud services which are not available in all the regions?",
+    "placeholder": "Ec2",
+    "expressionProperties": {
+      "hide": "model.Q26 !== 'no'"
+    }
   }
 ]
