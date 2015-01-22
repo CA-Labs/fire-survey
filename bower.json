@@ -1,6 +1,6 @@
 {
   "name": "fire-survey",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/CA-Labs/fire-survey",
   "authors": [
     "Jacek Dominiak <domja01@ca.com>"
@@ -21,7 +21,6 @@
     "angular-formly": "~1.0.0",
     "traceur": "~0.0.81",
     "angular-formly-templates-bootstrap": "~0.0.2",
-    "bootstrap": "~3.3.1",
-    "angular-formly-templates-vanilla": "~0.0.2"
+    "bootstrap": "~3.3.1"
   }
 }

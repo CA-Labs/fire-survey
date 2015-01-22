@@ -13,7 +13,7 @@ angular.module('fire-survey', [
     .config(ApplicationConfig)
     .constant('Configuration', {
         "title": "Fire Survey"
-        , "text": "fsdfsdfdsfsdfsd fds "
+        , "text": ""
     })
     .constant('FirebaseConfig', {
         url: 'https://ca-fire-survey.firebaseio.com/'
@@ -49,6 +49,10 @@ function ApplicationConfig($stateProvider, $urlRouterProvider, formlyConfigProvi
     // fallback routes
     $urlRouterProvider.otherwise('/form/default');
 
-    // extend angular-formly with custom template
+    // extend angular-formly with custom templates
     formlyConfigProvider.setTemplateUrl('multi-checkbox', 'views/multi-checkbox-template.html');
+    formlyConfigProvider.setTemplateUrl('well-multi-checkbox', 'views/well-multi-checkbox-template.html');
+    formlyConfigProvider.setTemplateUrl('well-text', 'views/well-text.html');
+    formlyConfigProvider.setTemplateUrl('well-number', 'views/well-number.html');
+
 }
