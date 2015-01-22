@@ -20,6 +20,7 @@ class MainController {
          * @type {boolean}
          */
         this.debug = (window.location.hostname == 'localhost');
+
     }
 
 }

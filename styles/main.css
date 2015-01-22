@@ -1,7 +1,7 @@
 
 
 div.form1 {
-    background-color: rgba(139, 128, 208, 0.27);
+    /*background-color: rgba(139, 128, 208, 0.27);*/
     margin-left: 5px;
 
    }
@@ -22,4 +22,9 @@ div.form1 {
 
 
 
+}
+
+#header h3 {
+    color: #ffffff;
+    padding-top: 20px;
 }
