@@ -12,7 +12,7 @@ angular.module('fire-survey', [
 ])
     .config(ApplicationConfig)
     .constant('Configuration', {
-        "title": "Fire Survey"
+        "title": "Cloud Service Providers survey"
         , "text": ""
     })
     .constant('FirebaseConfig', {
