@@ -52,7 +52,7 @@
   {
     "key": "Q1",
     "type": "radio",
-    "label": "1.  Does your firm provide support (email, phone or live chat) to solve the non-technical problems of the users (for example support in sales,finance,legal problems,etc.)?",
+    "label": "1.  Does your company provide support (email, phone or live chat) to solve the non-technical problems of the users (for example support in sales,finance,legal problems,etc.)?",
     "options": [
       {
         "name": "Yes",
@@ -67,7 +67,7 @@
   {
     "key": "Q2",
     "type": "multi-checkbox",
-    "label": "2.  In what languages does your firm provide live chat support?",
+    "label": "2.  In what languages does your company provide live chat support?",
     "options": [
       {
         "name": "English",
@@ -98,7 +98,7 @@
         "value": "portugs"
       },
       {
-        "name": "others",
+        "name": "Others",
         "value": "others"
       }
     ]
@@ -108,10 +108,9 @@
     "type": "well-text",
     "line": 4,
     "label": "Please enter the other languages that are not in the list above.",
-    "placeholder": "persian,indian",
+    "placeholder": "",
     "expressionProperties": {
-      "hide": "model.Q2 !== 'others'",
-      "hide": "!model.Q2.others"
+      "hide": "!model.Q2.Others"
     }
   },
   {
@@ -120,19 +119,19 @@
     "label": "3.  What is the size of the currently active user community (online forums, discussion platforms etc.) supported by your firm? ",
     "options": [
       {
-        "name": "1-100",
+        "name": "1 - 100",
         "value": "less100"
       },
       {
-        "name": "100-1000",
+        "name": "100 - 1000",
         "value": "100bet1000"
       },
       {
-        "name": "1000-10.000",
+        "name": "1000 - 10,000",
         "value": "1000bet10.000"
       },
       {
-        "name": "10.000 or above",
+        "name": "10,000 or above",
         "value": "10.000more"
       },
       {
@@ -144,34 +143,33 @@
   {
     "key": "Q4",
     "type": "radio",
-    "label": "4. How long is the maximum expected delay guaranteed by your firm between a support request placed by the user via email and response with solution from the firm ?",
+    "label": "4. How long is the maximum expected delay guaranteed by your company between a support request placed by the user via email and response with solution from the company ?",
     "options": [
       {
-        "name": "1-3 hour",
+        "name": "Less than 1 hour",
         "value": "1bet3h"
       },
       {
-        "name": "3-6 hour",
+        "name": "1-3 hours",
         "value": "3bet6h"
       },
       {
-        "name": "6-10 hour",
+        "name":"3-6 hours",
         "value": "6bet10h"
       },
       {
-        "name": "10-24 hour",
+        "name": "6 hours to 1 day",
         "value": "10bet24h"
       },
       {
-        "name": "24-48 hour",
+        "name": "1 to 2 days" ,
         "value": "24bet48h"
       },
       {
-        "name": "48 hour or above",
+        "name": "more than 2 days",
         "value": "48hmore"
       }
-    ],
-    "description": "Please provide an hour based estimate."
+    ]
   },
   {
     "key": "hiddenWhenUnchecked",
@@ -179,30 +177,29 @@
     "line": 4,
     "label":"Please write comment if any.",
     "expressionProperties": {
-      "hide": "model.Q4 !== '48hmore'"
-
+      "hide":"!model.Q4"
     }
   },
   {
     "key": "Q5",
     "type": "radio",
-    "label": "5.  How long is the maximum expected delay between the order placed by the user for any service of the firm (eg. compute, storage, database etc.) and the delivery of the ordered service by the firm ?",
+    "label": "5.  How long is the maximum expected delay between the order placed by the user for any service of the company (eg. compute, storage, database etc.) and the delivery of the ordered service by the company ?",
     "description": "Please give an estimated delivery time in days.",
     "options": [
       {
-        "name": "1-3 day",
+        "name": "1-3 days",
         "value": "1bet3d"
       },
       {
-        "name": "3-6 day",
+        "name": "3-6 days",
         "value": "3bet6d"
       },
       {
-        "name": "6-10 day",
+        "name": "6-10 days",
         "value": "6bet10d"
       },
       {
-        "name": "10 day or above",
+        "name": "10 days or above",
         "value": "10dmore"
       }
     ]
@@ -213,7 +210,7 @@
     "line": 4,
     "label":"Please write comment if any.",
     "expressionProperties": {
-      "hide": "model.Q5 !== '10dmore'"
+      "hide": "!model.Q5"
     }
   },
   {
@@ -231,23 +228,22 @@
       }
     ]
   },
-
   {
     "key": "Q7",
     "type": "radio",
-    "label": "7.  Does your organization support scaling (eg. scale out, scale up)?",
+    "label": "7.  Does your company support scaling (eg. scale out, scale up)?",
     "description":"Scale horizontally (or scale out) means to add more nodes to a system, scale vertically (or scale up) means to add resources to a single node in a system",
     "options": [
       {
-        "name": "Horizontal scaling",
+        "name": "Horizontal Scaling",
         "value": "horizontal"
       },
       {
-        "name": "Vertical scaling",
+        "name": "Vertical Scaling",
         "value": "vertical"
       },
       {
-        "name": "Both type of scaling",
+        "name": "Both types of Scaling",
         "value": "both"
       }
     ]
@@ -255,11 +251,9 @@
   {
     "key": "Q8",
     "type": "radio",
-    "label": "8.  Does your organization allow customers to access to its logs (security logs, event logs etc.)?",
-    "description": "This is include any kind of log such as security code and so on.",
+    "label": "8.  Does your company allow customers to access to its logs (security logs, event logs etc.)?",
     "options": [
       {
-
         "name": "Yes",
         "value": "yes"
       },
@@ -275,13 +269,13 @@
     "line": 4,
     "label": "Please write exceptions if any.",
     "expressionProperties": {
-      "hide": "model.Q8 !== 'yes'"
+      "hide": "!model.Q8"
     }
   },
   {
     "key": "Q9",
     "type": "radio",
-    "label": "9.  Does your organization provide complete monitoring of cloud computing, web,operating systems and storage services?",
+    "label": "9.  Does your company provide complete monitoring of cloud computing, web,operating systems and storage services?",
     "options": [
       {
         "name": "Yes",
@@ -299,13 +293,13 @@
     "line": 4,
     "label": "Please enter comment if any.",
     "expressionProperties": {
-      "hide": "model.Q8 !== 'yes'"
+      "hide": "!model.Q9"
     }
   },
   {
     "key": "Q10",
     "type": "radio",
-    "label": "10. Does your organization give any possibility for NoSql database sharding?",
+    "label": "10. Does your company give any possibility for NoSql database sharding?",
     "options": [
       {
         "name": "Yes",
@@ -320,10 +314,9 @@
   {
     "key": "Q11",
     "type": "radio",
-    "label": "11. Does your organization provide multiple site infrastructure?",
+    "label": "11. Does your company provide multiple site infrastructure?",
     "options": [
       {
-
         "name": "Yes",
         "value": "yes"
       },
@@ -336,24 +329,21 @@
   {
     "key": "hiddenWhenUnchecked",
     "type": "well-text",
-    "label": "Where are the locations for the multiple site infrastructure?",
+    "label": "Enter the locations of the multiple site infrastructure?",
     "placeholder": "san francisco",
     "expressionProperties": {
-      "hide": "model.Q11 !== 'yes'"
+      "hide": "model.Q11 !== 'yes' "
     }
   },
-
   {
     "key": "Q12",
     "type": "radio",
     "label": "12. Does your company provide user data backup in multiple layers?",
     "options": [
       {
-
         "name": "Yes",
         "value": "yes"
       },
-
       {
         "name": "No",
         "value": "no"
@@ -394,7 +384,7 @@
   {
     "key": "hiddenWhenUnchecked",
     "type": "well-text",
-    "label": "Please write down if your company provide other types of backup?",
+    "label": "Please specify other types of backups, if any, that your company provides",
     "expressionProperties": {
       "hide": "!model.Q12hiddenWhenUnchecked.other"
     }
@@ -417,7 +407,7 @@
   {
     "key": "Q14",
     "type": "radio",
-    "label": "14. Does your organization provide VPC (Virtual Private Cloud) networks for the customers?",
+    "label": "14. Does your company provide VPC (Virtual Private Cloud) networks for the customers?",
     "options": [
       {
         "name": "Yes",
@@ -432,7 +422,7 @@
   {
     "key": "Q15",
     "type": "radio",
-    "label": "15. Does your organization support any SSL (Secure Sockets Layer) certificates for customers?",
+    "label": "15. Does your company support any SSL (Secure Sockets Layer) certificates for customers?",
     "options": [
       {
         "name": "Yes",
@@ -447,7 +437,7 @@
   {
     "key": "Q16",
     "type": "radio",
-    "label": "16. Does your organization support content delivery (CDN) for customers?",
+    "label": "16. Does your company support content delivery (CDN) for customers?",
     "options": [
       {
         "name": "Yes",
@@ -471,7 +461,7 @@
   {
     "key": "Q17",
     "type": "radio",
-    "label": "17. Does your organization allocate dedicated IP addresses to serve SSL content at each edge location?",
+    "label": "17. Does your company allocate dedicated IP addresses to serve SSL content at each edge location?",
     "options": [
       {
         "name": "Yes",
@@ -486,7 +476,7 @@
   {
     "key": "Q18",
     "type": "radio",
-    "label": "18. Does your firm allow multiple domains to serve SSL traffic over the same IP address?",
+    "label": "18. Does your company allow multiple domains to serve SSL traffic over the same IP address?",
     "options": [
       {
         "name": "Yes",
@@ -498,11 +488,10 @@
       }
     ]
   },
-
   {
     "key": "Q19",
     "type": "radio",
-    "label": "19. Does your organization support SSH connection (Secure Shell) for the customers?",
+    "label": "19. Does your company support SSH connection (Secure Shell) for the customers?",
     "options": [
       {
         "name": "Yes",
@@ -517,7 +506,7 @@
   {
     "key": "Q20",
     "type": "radio",
-    "label": "20. Does your organization provide data encryption for the customers?",
+    "label": "20. Does your company provide data encryption for the customers?",
     "options": [
       {
         "name": "Yes",
@@ -543,7 +532,6 @@
         "value": "transmitOverIE"
       },
       {
-
         "name": "Other",
         "value": "Other"
       }
@@ -555,7 +543,7 @@
   {
     "key": "Q20hiddenWhenUncheckedOther",
     "type": "well-text",
-    "label": "Please write down if your company is using other types of data encryption?",
+    "label": "Please specify other types of data encryption used, if any",
     "expressionProperties": {
       "hide": "!model.Q20hiddenWhenUnchecked.Other"
     }
@@ -563,8 +551,8 @@
   {
     "key": "Q21",
     "type": "multi-checkbox",
-    "label": "21. Which of the certificates that guarantee physical security are held by organization?",
-    "description": "Please write missing certifications if it is not listed below.",
+    "label": "21. Which of the certificates that guarantee physical security are held by company?",
+    "description": "Please specify other certifications if any",
     "options": [
       {
         "name": "SOC 1",
@@ -607,7 +595,6 @@
         "value": "SAFEHARBOR"
       },
       {
-
         "name": "other",
         "value": "other"
       }
@@ -616,7 +603,7 @@
   {
     "key": "hiddenWhenUnchecked",
     "type": "well-text",
-    "label": "Please write any other certifications that you have?",
+    "label": "Please write any other certifications that you have",
     "placeholder": "Multi-Tier Cloud Security (MTCS)",
     "expressionProperties": {
       "hide": "model.Q21 !== 'other'",
@@ -628,12 +615,12 @@
     "type": "textarea",
     "line": 15,
     "label": "22. What sort of firewalls and detection systems are in operation to guard against malicious network activity or system attacks?",
-    "description": "Please enter sort of firewalls and detection systems which your company use in the separate line."
+    "description": "Please enter list of firewalls and detection systems that your company uses for user data protection."
   },
   {
     "key": "Q23",
     "type": "radio",
-    "label": "23. Does your organization consider incident response plan in case of the aftermath of a security breach or attack?",
+    "label": "23. Does your company consider incident response plan in case of the aftermath of a security breach or attack?",
     "description":"An incident response plan is a general plan for dealing with any number of crises that could negatively impact your business.",
     "options": [
       {
@@ -649,7 +636,7 @@
   {
     "key": "Q24",
     "type": "radio",
-    "label": "24. Does your organization allow customers to implement their own security architecture?",
+    "label": "24. Does your company allow customers to implement their own security architecture?",
     "options": [
       {
         "name": "Yes",
@@ -664,7 +651,7 @@
   {
     "key": "Q25",
     "type": "radio",
-    "label": "25. Does your organization allow customers to secure and manage access from clients such as PC and mobile devices?",
+    "label": "25. Does your company allow customers to secure and manage access from clients such as PC and mobile devices?",
     "options": [
       {
         "name": "Yes",
@@ -679,19 +666,19 @@
   {
     "key": "Q26",
     "type": "number",
-    "label": "26. What has been total average downtime for the last three month in percentage?",
+    "label": "26. What has been total average uptime for the last three months in percentage?",
     "placeholder": "95"
   },
   {
     "key": "Q27",
     "type": "number",
-    "label": "   What has been total average downtime for the last six month in percentage?",
+    "label": "   What has been total average uptime for the last six months in percentage?",
     "placeholder": "96"
   },
   {
     "key": "Q28",
     "type": "number",
-    "label": "   What has been total average downtime for the last one year in percentage?",
+    "label": "   What has been total average uptime for the last one year in percentage?",
     "placeholder": "94"
   },
   {
@@ -705,18 +692,17 @@
       },
       {
         "name": "No",
-        "value": "no",
-        "description": "if your answer is negative,"
+        "value": "no"
       }
     ]
   },
   {
     "key": "hiddenWhenUnchecked",
     "type": "well-text",
-    "label": "Please mention all the cloud services which has limited region availability?",
-    "placeholder": "Ec2",
+    "label": "Please comment on the exceptions in regional availability",
+    "placeholder": "EC2",
     "expressionProperties": {
-      "hide": "model.Q29 !== 'no'"
+      "hide": "!model.Q29"
     }
   }
 ]
