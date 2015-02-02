@@ -18,7 +18,7 @@ angular.module('fire-survey', [
         , "text": "This survey is designed to collect information from European Cloud Service providers about their services in order to showcase them in a decision support system (DSS) for ease of cloud service selection by the end user. You can select your company name and fill in the information in the survey. After clicking submit, the web link that appears on the top can be used by multiple members from a company to update or complete the partially filled information of their company."
     })
     .constant('FirebaseConfig', {
-        url: 'https://ca-fire-survey.firebaseio.com/'
+        url: 'https://modaclouds-csp.firebaseio.com/'
         , forms: 'results'
     });
 
