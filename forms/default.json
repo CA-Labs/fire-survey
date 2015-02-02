@@ -1,10 +1,5 @@
 [
   {
-    "key": "section-user",
-    "type": "section-title",
-    "label": "User Information"
-  },
-  {
     "key": "firstName",
     "type": "text",
     "label": "First Name"
@@ -81,9 +76,14 @@
     "required": true
   },
   {
+    "key": "section-support",
+    "type": "section-title",
+    "label": "Support Services"
+  },
+  {
     "key": "Q1",
     "type": "radio",
-    "label": "1.  Does your company provide support (email, phone or live chat) to solve the non-technical problems of the users (for example support in sales,finance,legal problems,etc.)?",
+    "label": "A.  Does your company provide support (email, phone or live chat) to solve the non-technical problems of the users (for example support in sales,finance,legal problems,etc.)?",
     "options": [
       {
         "name": "Yes",
@@ -98,7 +98,7 @@
   {
     "key": "Q2",
     "type": "multi-checkbox",
-    "label": "2.  In what languages does your company provide live chat support?",
+    "label": "B.  In what languages does your company provide live chat support?",
     "options": [
       {
         "name": "English",
@@ -147,7 +147,7 @@
   {
     "key": "Q3",
     "type": "radio",
-    "label": "3.  What is the size of the currently active user community (online forums, discussion platforms etc.) supported by your firm? ",
+    "label": "C.  What is the size of the currently active user community (online forums, discussion platforms etc.) supported by your firm? ",
     "options": [
       {
         "name": "1 - 100",
@@ -174,7 +174,7 @@
   {
     "key": "Q4",
     "type": "radio",
-    "label": "4. How long is the maximum expected delay guaranteed by your company between a support request placed by the user via email and response with solution from the company ?",
+    "label": "D. How long is the maximum expected delay guaranteed by your company between a support request placed by the user via email and response with solution from the company ?",
     "options": [
       {
         "name": "Less than 1 hour",
@@ -212,57 +212,14 @@
     }
   },
   {
-    "key": "Q5",
-    "type": "radio",
-    "label": "5.  How long is the maximum expected delay between the order placed by the user for any service of the company (eg. compute, storage, database etc.) and the delivery of the ordered service by the company ?",
-    "description": "Please give an estimated delivery time in days.",
-    "options": [
-      {
-        "name": "1-3 days",
-        "value": "1bet3d"
-      },
-      {
-        "name": "3-6 days",
-        "value": "3bet6d"
-      },
-      {
-        "name": "6-10 days",
-        "value": "6bet10d"
-      },
-      {
-        "name": "10 days or above",
-        "value": "10dmore"
-      }
-    ]
-  },
-  {
-    "key": "hiddenWhenUnchecked",
-    "type": "well-text",
-    "line": 4,
-    "label":"Please write comment if any.",
-    "expressionProperties": {
-      "hide": "!model.Q5"
-    }
-  },
-  {
-    "key": "Q6",
-    "type": "radio",
-    "label": "6.  Does your company provide public access to its quarterly and/or annual finance report?",
-    "options": [
-      {
-        "name": "Yes",
-        "value": "yes"
-      },
-      {
-        "name": "No",
-        "value": "no"
-      }
-    ]
+    "key": "section-technical",
+    "type": "section-title",
+    "label": "Technical Services"
   },
   {
     "key": "Q7",
     "type": "radio",
-    "label": "7.  Does your company support scaling (eg. scale out, scale up)?",
+    "label": "A.  Does your company support scaling (eg. scale out, scale up)?",
     "description":"Scale horizontally (or scale out) means to add more nodes to a system, scale vertically (or scale up) means to add resources to a single node in a system",
     "options": [
       {
@@ -282,7 +239,7 @@
   {
     "key": "Q8",
     "type": "radio",
-    "label": "8.  Does your company allow customers to access to its logs (security logs, event logs etc.)?",
+    "label": "B.  Does your company allow customers to access to its logs (security logs, event logs etc.)?",
     "options": [
       {
         "name": "Yes",
@@ -306,7 +263,7 @@
   {
     "key": "Q9",
     "type": "radio",
-    "label": "9.  Does your company provide complete monitoring of cloud computing, web,operating systems and storage services?",
+    "label": "C.  Does your company provide complete monitoring of cloud computing, web,operating systems and storage services?",
     "options": [
       {
         "name": "Yes",
@@ -330,7 +287,7 @@
   {
     "key": "Q10",
     "type": "radio",
-    "label": "10. Does your company give any possibility for NoSql database sharding?",
+    "label": "D. Does your company give any possibility for NoSql database sharding?",
     "options": [
       {
         "name": "Yes",
@@ -345,7 +302,7 @@
   {
     "key": "Q11",
     "type": "radio",
-    "label": "11. Does your company provide multiple site infrastructure?",
+    "label": "E. Does your company provide multiple site infrastructure?",
     "options": [
       {
         "name": "Yes",
@@ -369,7 +326,7 @@
   {
     "key": "Q12",
     "type": "radio",
-    "label": "12. Does your company provide user data backup in multiple layers?",
+    "label": "F. Does your company provide user data backup in multiple layers?",
     "options": [
       {
         "name": "Yes",
@@ -423,7 +380,7 @@
   {
     "key": "Q13",
     "type": "radio",
-    "label": "13. Does your company allow customers to perform their own backups?",
+    "label": "G. Does your company allow customers to perform their own backups?",
     "options": [
       {
         "name": "Yes",
@@ -438,7 +395,7 @@
   {
     "key": "Q14",
     "type": "radio",
-    "label": "14. Does your company provide VPC (Virtual Private Cloud) networks for the customers?",
+    "label": "H. Does your company provide VPC (Virtual Private Cloud) networks for the customers?",
     "options": [
       {
         "name": "Yes",
@@ -453,7 +410,7 @@
   {
     "key": "Q15",
     "type": "radio",
-    "label": "15. Does your company support any SSL (Secure Sockets Layer) certificates for customers?",
+    "label": "I. Does your company support any SSL (Secure Sockets Layer) certificates for customers?",
     "options": [
       {
         "name": "Yes",
@@ -468,7 +425,7 @@
   {
     "key": "Q16",
     "type": "radio",
-    "label": "16. Does your company support content delivery (CDN) for customers?",
+    "label": "J. Does your company support content delivery (CDN) for customers?",
     "options": [
       {
         "name": "Yes",
@@ -492,7 +449,7 @@
   {
     "key": "Q17",
     "type": "radio",
-    "label": "17. Does your company allocate dedicated IP addresses to serve SSL content at each edge location?",
+    "label": "K. Does your company allocate dedicated IP addresses to serve SSL content at each edge location?",
     "options": [
       {
         "name": "Yes",
@@ -507,7 +464,7 @@
   {
     "key": "Q18",
     "type": "radio",
-    "label": "18. Does your company allow multiple domains to serve SSL traffic over the same IP address?",
+    "label": "L. Does your company allow multiple domains to serve SSL traffic over the same IP address?",
     "options": [
       {
         "name": "Yes",
@@ -522,7 +479,7 @@
   {
     "key": "Q19",
     "type": "radio",
-    "label": "19. Does your company support SSH connection (Secure Shell) for the customers?",
+    "label": "M. Does your company support SSH connection (Secure Shell) for the customers?",
     "options": [
       {
         "name": "Yes",
@@ -535,9 +492,14 @@
     ]
   },
   {
+    "key": "section-security",
+    "type": "section-title",
+    "label": "Data Security"
+  },
+  {
     "key": "Q20",
     "type": "radio",
-    "label": "20. Does your company provide data encryption for the customers?",
+    "label": "A. Does your company provide data encryption for the customers?",
     "options": [
       {
         "name": "Yes",
@@ -582,7 +544,7 @@
   {
     "key": "Q21",
     "type": "multi-checkbox",
-    "label": "21. Which of the certificates that guarantee physical security are held by company?",
+    "label": "B. Which of the certificates that guarantee physical security are held by company?",
     "description": "Please specify other certifications if any",
     "options": [
       {
@@ -645,13 +607,13 @@
     "key": "Q22",
     "type": "textarea",
     "line": 15,
-    "label": "22. What sort of firewalls and detection systems are in operation to guard against malicious network activity or system attacks?",
+    "label": "C. What sort of firewalls and detection systems are in operation to guard against malicious network activity or system attacks?",
     "description": "Please enter list of firewalls and detection systems that your company uses for user data protection."
   },
   {
     "key": "Q23",
     "type": "radio",
-    "label": "23. Does your company consider incident response plan in case of the aftermath of a security breach or attack?",
+    "label": "D. Does your company consider incident response plan in case of the aftermath of a security breach or attack?",
     "description":"An incident response plan is a general plan for dealing with any number of crises that could negatively impact your business.",
     "options": [
       {
@@ -667,7 +629,60 @@
   {
     "key": "Q24",
     "type": "radio",
-    "label": "24. Does your company allow customers to implement their own security architecture?",
+    "label": "E. Does your company allow customers to implement their own security architecture?",
+    "options": [
+      {
+        "name": "Yes",
+        "value": "yes"
+      },
+      {
+        "name": "No",
+        "value": "no"
+      }
+    ]
+  },
+  {
+    "key": "section-service",
+    "type": "section-title",
+    "label": "Service Availability"
+  },
+  {
+    "key": "Q5",
+    "type": "radio",
+    "label": "A.  How long is the maximum expected delay between the order placed by the user for any service of the company (eg. compute, storage, database etc.) and the delivery of the ordered service by the company ?",
+    "description": "Please give an estimated delivery time in days.",
+    "options": [
+      {
+        "name": "1-3 days",
+        "value": "1bet3d"
+      },
+      {
+        "name": "3-6 days",
+        "value": "3bet6d"
+      },
+      {
+        "name": "6-10 days",
+        "value": "6bet10d"
+      },
+      {
+        "name": "10 days or above",
+        "value": "10dmore"
+      }
+    ]
+  },
+  {
+    "key": "hiddenWhenUnchecked",
+    "type": "well-text",
+    "line": 4,
+    "label":"Please write comment if any.",
+    "expressionProperties": {
+      "hide": "!model.Q5"
+    }
+  },
+  {
+    "key": "Q6",
+    "type": "radio",
+    "label": "B.  Does your company provide public access to its quarterly and/or annual finance report?",
     "options": [
       {
         "name": "Yes",
@@ -682,7 +697,7 @@
   {
     "key": "Q25",
     "type": "radio",
-    "label": "25. Does your company allow customers to secure and manage access from clients such as PC and mobile devices?",
+    "label": "C. Does your company allow customers to secure and manage access from clients such as PC and mobile devices?",
     "options": [
       {
         "name": "Yes",
@@ -697,7 +712,7 @@
   {
     "key": "Q26",
     "type": "number",
-    "label": "26. What has been total average uptime for the last three months in percentage?",
+    "label": "D. What has been total average uptime for the last three months in percentage?",
     "placeholder": "95"
   },
   {
@@ -715,7 +730,7 @@
   {
     "key": "Q29",
     "type": "radio",
-    "label": "27. Are all the cloud services available in all the regions?",
+    "label": "E. Are all the cloud services available in all the regions?",
     "options": [
       {
         "name": "Yes",
