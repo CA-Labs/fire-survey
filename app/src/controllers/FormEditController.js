@@ -23,6 +23,7 @@ class FormEditController extends FormController {
         // fetch Form data
         const url = FirebaseConfig.url + FirebaseConfig.forms + '/' + $stateParams.resultId;
         this.formData = $firebase(new Firebase(url)).$asObject();
+
     }
 
     /**
@@ -40,4 +41,5 @@ class FormEditController extends FormController {
             self.error = error;
         });
     }
+
 }

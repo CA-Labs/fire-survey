@@ -1,5 +1,10 @@
 [
   {
+    "key": "section-user",
+    "type": "section-title",
+    "label": "User Information"
+  },
+  {
     "key": "firstName",
     "type": "text",
     "label": "First Name"
@@ -53,8 +58,22 @@
       {
         "name": "Heroku",
         "value": "Heroku"
+      },
+      {
+        "name": "other",
+        "value": "other"
       }
     ]
+  },
+  {
+    "key": "companyNameHiddenWhenUnchecked",
+    "type": "well-text",
+    "line": 4,
+    "label": "Please enter your company name",
+    "placeholder": "",
+    "expressionProperties": {
+      "hide": "model.companyName != 'other'"
+    }
   },
   {
     "key": "email",

@@ -64,8 +64,8 @@ class FormController {
         // Add new element
         this.results.$add(this.formData).then(
             function (value) {
-                //TODO: change the state to the saved one
                 self._state.transitionTo('edit', {"formTemplate": self._stateParams.formTemplate, "resultId": value.key()});
+                self.message = "Data Saved!";
             }
         );
     }

@@ -9,6 +9,7 @@ class MainController {
 
     constructor(
         Configuration
+        , $window
     ) {
         /**
          * Inject configuration to be widely available
@@ -21,6 +22,27 @@ class MainController {
          */
         this.debug = (window.location.hostname == 'localhost');
 
+        // pass window object
+        this._window = $window;
+
+    }
+
+    urlButtonVisible() {
+        return (this._window.location.href.indexOf("edit") > -1);
+    }
+
+    /**
+     * Get Url of the current page
+     */
+    getUrlString() {
+        return this._window.location.href;
+    }
+
+    /**
+     * Function to be called once the URL button has been pressed
+     */
+    copyUrlFeedback() {
+        alert("Link copied");
     }
 
 }

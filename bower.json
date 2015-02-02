@@ -22,6 +22,8 @@
     "angular-formly-templates-bootstrap": "~0.0.2",
     "bootstrap": "~3.3.1",
     "angular-formly-templates-vanilla": "~0.0.2",
-    "traceur-runtime": "~0.0.81"
+    "traceur-runtime": "~0.0.81",
+    "zeroclipboard": "~2.2.0",
+    "ng-clip": "~0.2.6"
   }
 }
